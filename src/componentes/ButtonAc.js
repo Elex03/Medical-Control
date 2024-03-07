@@ -9,9 +9,8 @@ export function Button_find() {
 
         <TouchableOpacity
             onPress={() => Navigation.navigate("Acceder")}
-            style={styles.Button}
-            
-        >
+            style={styles.Button}   
+        >    
             <Text style={styles.Text} >Acceder </Text>
         </TouchableOpacity>
 

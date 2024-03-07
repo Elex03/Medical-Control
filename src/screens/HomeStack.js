@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TouchableOpacity, TextInput, StyleSheet, DimensionValue, Dimensions, Button } from "react-native";
+import { View, Text, TouchableOpacity, TextInput, StyleSheet, DimensionValue, Dimensions, Button, Modal } from "react-native";
 const { width, height } = Dimensions.get('window')
 import { useNavigation } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
@@ -9,7 +9,6 @@ import { SetStateAction } from "react";
 const Home = () => {
 
     const initialState = {
-
         Correo: '',
         Contraseña: ''
     }
@@ -17,9 +16,16 @@ const Home = () => {
     const handlerChangeText = (value, name) => {
         setState({ ...state, [name]: value })
     }
-    const saveProduct = () =>
-    {
-        Text:state
+    const [errors, SetErrors] = useState({
+        title: '',
+    });
+
+    const cleanStates = () => {
+        setCorreo('');
+        setContra('');
+        SetErrors({
+            title: '',
+        });
     }
     return (
         <View style={styles.Container}>
@@ -30,20 +36,26 @@ const Home = () => {
                 style={styles.textInput}
                 onChangeText={(value) => handlerChangeText(value, 'Correo')}
                 value={state.Correo}
-                
-
             />
+            {errors.title ? <Text>Este correo no existe</Text> : null}
             <TextInput
                 placeholder="Contraseña"
                 style={styles.textInput}
                 secureTextEntry={true}
                 onChangeText={(value) => handlerChangeText(value, 'Contraseña')}
-                value={state.Contraseña}
-
+                value={state.Contraseña}  
             />
-            <Button_find />
+            <Button_find
+                action={() => {
+                    let err = {};
+                    if (!title) err = { ...err, title: 'Ingrese hpta' };
+                    if (err.title) {
+                        SetErrors(_errors => ({ ..._errors, ...err }));
+                    }
+                    
+                }}
+            />
             <StatusBar style="auto" />
-            
         </View>
     )
 }
@@ -68,6 +80,5 @@ const styles = StyleSheet.create({
         marginTop: 40,
         paddingStart: 15
     },
-
 })
 export default Home

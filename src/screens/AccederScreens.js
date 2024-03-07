@@ -12,7 +12,10 @@ const AccederScreens = () => {
                     textAlign: 'center',
                     marginTop: "20%"
                 }}
-            >Setting Screen</Text>
+            >
+
+                hhj
+            </Text>
 
         </View>
 
