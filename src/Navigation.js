@@ -6,11 +6,7 @@ import React from "react";
 import { StyleSheet } from "react-native";
 //Screens
 import HomeStack from "./screens/HomeStack";
-import SettingScreens from "./screens/SettingScreens";
-import AccountScreen from "./screens/accountScreen";
-import Create from "./screens/CreatScreens";
-
-
+import AccederScreens from "./screens/AccederScreens";
 //Iconos
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -29,32 +25,15 @@ function MyStack() {
                 }}
             />
             <HomeStackNa.Screen
-                name='Account'
-                component={AccountScreen}
+                name='Acceder'
+                component={AccederScreens}
                 options={{
                     headerShown: false
                 }}
             />
-            <HomeStackNa.Screen
-                name='Setting'
-                component={SettingScreens}
-                options={{
-                    headerShown: false
-                }}
-            />
-            <HomeStackNa.Screen
-                name='Create'
-                component={Create}
-                options={{
-                    headerShown: false
-                }}
-            />
-
-
         </HomeStackNa.Navigator>
     )
 }
-
 export default function Navigation() {
     return (
         <NavigationContainer>

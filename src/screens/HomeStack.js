@@ -4,8 +4,7 @@ const { width, height } = Dimensions.get('window')
 import { useNavigation } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import { Button_find } from "../componentes/ButtonAc";
-import { Button_Setting } from "../componentes/Button_2";
-import { Button_CreateC } from "../componentes/ButtonCreatC";
+
 const Home = () => {
     return (
         <View style={styles.Container}>
@@ -21,11 +20,6 @@ const Home = () => {
                 secureTextEntry={true}
             />
             <Button_find />
-            <Button_Setting />
-            <Text
-                style={styles.textCuenta}
-            >No tienes ningúna cuenta?</Text>
-            <Button_CreateC/>
             <StatusBar style="auto" />
         </View>
     )
@@ -51,10 +45,6 @@ const styles = StyleSheet.create({
         marginTop: 40,
         paddingStart: 15
     },
-    textCuenta: {
-        marginTop: 20,
-        right: 45,
-    }
+    
 })
-
 export default Home

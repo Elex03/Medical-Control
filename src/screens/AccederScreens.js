@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text } from "react-native";
 
 
-const SettingScreens = () => {
+const AccederScreens = () => {
 
     return (
         <View>
@@ -19,4 +19,4 @@ const SettingScreens = () => {
     )
 }
 
-export default SettingScreens
+export default AccederScreens

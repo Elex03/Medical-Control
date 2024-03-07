@@ -2,12 +2,13 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
+
 export function Button_find() {
     const Navigation = useNavigation();
     return (
 
         <TouchableOpacity
-            onPress={() => Navigation.navigate("Account")}
+            onPress={() => Navigation.navigate("Acceder")}
             style={styles.Button}
         >
             <Text style={styles.Text} >Acceder </Text>
