@@ -10,9 +10,11 @@ export function Button_find() {
         <TouchableOpacity
             onPress={() => Navigation.navigate("Acceder")}
             style={styles.Button}
+            
         >
             <Text style={styles.Text} >Acceder </Text>
         </TouchableOpacity>
+
     )
 }
 const styles = StyleSheet.create({

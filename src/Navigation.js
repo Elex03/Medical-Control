@@ -7,10 +7,10 @@ import { StyleSheet } from "react-native";
 //Screens
 import HomeStack from "./screens/HomeStack";
 import AccederScreens from "./screens/AccederScreens";
-//Iconos
+//Icons
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-//Funcion
+//Function
 const HomeStackNa = createNativeStackNavigator();
 function MyStack() {
     return (
