@@ -3,9 +3,9 @@ import { View, Text, TouchableOpacity, TextInput, StyleSheet, DimensionValue, Di
 const { width, height } = Dimensions.get('window')
 import { useNavigation } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
-import { Button_find } from "../componentes/ButtonAc";
+import { Button_find } from "../Components/ButtonAc";
 import { useState } from "react";
-import { SetStateAction } from "react";
+
 const Home = () => {
 
     const initialState = {
